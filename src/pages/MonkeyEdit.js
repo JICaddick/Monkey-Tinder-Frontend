@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class MonkeyEdit extends Component {
+class MonkeyEdit extends Component {
   render() {
     return (
       <div>MonkeyEdit</div>
