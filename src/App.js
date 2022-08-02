@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import MonkeyIndex from './pages/MonkeyIndex'
+import MonkeyShow from './pages/MonkeyShow'
+import MonkeyNew from './pages/MonkeyNew'
+import MonkeyEdit from './pages/MonkeyEdit'
+import NotFound from './pages/NotFound'
+import mockMonkey from './mockMonkey.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      monkey: mockMonkey
+    }
+  }
+
+
+  render() {
+    console.log(this.state.monkey)
+    return (
+      <>
+        <Router>
+          <Header/>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/monkeyindex" component={MonkeyIndex} />
+              <Route path="/monkeyshow" component={MonkeyShow} />
+              <Route path="/monkeynew" component={MonkeyNew} />
+              <Route path="/catedit" component={MonkeyEdit} />
+              <Route component={NotFound}/>
+            </Switch>
+          <Footer/>
+        </Router>
+      </>
+    )
+  }
 }
 
-export default App;
+export default App
