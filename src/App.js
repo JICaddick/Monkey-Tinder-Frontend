@@ -7,20 +7,20 @@ import MonkeyShow from './pages/MonkeyShow'
 import MonkeyNew from './pages/MonkeyNew'
 import MonkeyEdit from './pages/MonkeyEdit'
 import NotFound from './pages/NotFound'
-import mockMonkey from './mockMonkey.js'
+import monkey from './mockMonkey.js'
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
-import './App.css';
+import './App.css'
 
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      monkey: mockMonkey
+      monkey: monkey
     }
   }
 
