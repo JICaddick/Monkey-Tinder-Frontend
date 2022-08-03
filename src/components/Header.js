@@ -5,7 +5,7 @@ class Header extends Component {
     return (
         <>
             <header>
-                
+              Welcome to Monkey Tinder
             </header>    
         </>
 

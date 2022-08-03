@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 class Footer extends Component {
   render() {
     return (
-        <>
-            <footer>
-                © Primative Dating Inc 
-            </footer> 
-        </>
+      <>
+        <footer>
+          © Primative Dating Inc 
+        </footer> 
+      </>
     )
   }
 }

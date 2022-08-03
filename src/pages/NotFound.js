@@ -4,8 +4,8 @@ class NotFound extends Component {
   render() {
     return (
       <>
-      <div className='not-found-text'> Quit monkeying around, there's nothing here!!!</div>
-      <div className='not-found'></div>
+        <h2 className='not-found-text'>Quit monkeying around, there's nothing here!!!</h2>
+        <h3 className='not-found'></h3>
       </>
     )
   }
