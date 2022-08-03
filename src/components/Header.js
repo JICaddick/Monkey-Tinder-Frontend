@@ -5,7 +5,7 @@ class Header extends Component {
     return (
         <>
             <header>
-                I am the header
+                
             </header>    
         </>
 

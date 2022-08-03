@@ -4,7 +4,7 @@ class NotFound extends Component {
   render() {
     return (
       <>
-      <div>NotFound</div>
+      <div className='not-found-text'> Quit monkeying around, there's nothing here!!!</div>
       <div className='not-found'></div>
       </>
     )

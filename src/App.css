@@ -1,16 +1,37 @@
 header {
+  /* background-color: ;
+  color: ;
+  background: linear-gradient(to top,   ,   )
+  height: ;
+  text-align: center; */
   font-family: 'Times New Roman', Times, serif;
   font-size: 25px;
 }
 
 footer {
+  /* background-color: ;
+  color: ;
+  background: linear-gradient(to top,   ,   )
+  height: ;
+  text-align: center; */
   font-family: 'Times New Roman', Times, serif; 
-  font-size: 25px;
+  font-size: 30px;
 
 }
 
 .not-found{
   background-image: url(./assets/notfound.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   height: 600px;
   width: auto;
+}
+
+.not-found-text{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 80px;
+  padding-top: 40px;
 }
