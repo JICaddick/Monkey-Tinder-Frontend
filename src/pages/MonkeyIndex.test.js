@@ -10,11 +10,11 @@ describe("When MonkeyIndex renders", () => {
     const props = {
         monkey: [
             {
-                id: 1,
-                name: "Mittens",
-                age: 5,
-                enjoys: "sunshine and warm spots",
-                image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            id: 1,
+            name: "Felipe",
+            age: 3,
+            enjoys: "sunshine and warm spots",
+            image: "https://cdn.britannica.com/06/150806-050-6AE99C98/Proboscis-monkey.jpg?w=690&h=388&c=crop"
             }
         ]
     }

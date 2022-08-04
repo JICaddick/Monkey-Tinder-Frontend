@@ -1,24 +1,31 @@
 let monkey = [
     {
       id: 1,
-      name: "Mittens",
-      age: 5,
+      name: "Felipe",
+      age: 3,
       enjoys: "sunshine and warm spots",
-      image: "https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      image: "https://cdn.britannica.com/06/150806-050-6AE99C98/Proboscis-monkey.jpg?w=690&h=388&c=crop"
     },
     {
       id: 2,
-      name: "Raisins",
+      name: "Bertha",
       age: 4,
-      enjoys: "being queen of the dogs",
-      image: "https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80"
+      enjoys: "banana splits",
+      image: "https://live.staticflickr.com/3946/15368916487_7063f08a82_b.jpg"
     },
     {
       id: 3,
-      name: "Toast",
+      name: "Stella",
       age: 1,
       enjoys: "getting all the attention",
-      image: "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      image: "https://st2.depositphotos.com/2927537/7025/i/950/depositphotos_70253417-stock-photo-funny-monkey-with-a-red.jpg"
+  },
+        {
+      id: 4,
+      name: "Winston",
+      age: 5,
+      enjoys: "eating all the ticks",
+      image: "https://media.npr.org/blogs/monkeysee/2009/10/22/angrymonkey-480fe8cb9c9c711f76b537f3a7f7e186696e1b0c-s1100-c50.jpg"
     }
   ]
   export default monkey
