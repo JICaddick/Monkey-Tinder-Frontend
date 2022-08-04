@@ -24,6 +24,9 @@ class App extends Component {
     }
   }
 
+  createNewMonkey = (theNewMonkeyObject) => {
+    console.log(theNewMonkeyObject)
+  }
 
   render() {
     // console.log(this.state.monkey)
@@ -38,7 +41,10 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/monkeyedit" component={MonkeyEdit} />
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
-              <Route path="/monkeynew" component={MonkeyNew} />
+              <Route path="/monkeynew" 
+                render={() => {
+                  return <MonkeyNew createNewMonkey={this.createNewMonkey} />
+                }} />
               <Route path="/monkeyshow/:id" render={(props) => {
                 let id = +props.match.params.id // adding + sign will allow it to do conversion
                 // console.log(typeof id); // returns that id = string
