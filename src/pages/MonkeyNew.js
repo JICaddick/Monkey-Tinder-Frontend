@@ -68,8 +68,8 @@ class MonkeyNew extends Component {
             />
           </FormGroup>
           <Button
-          name='submit'
-          onClick={this.handleSubmit}> 
+            name='submit'
+            onClick={this.handleSubmit}> 
             Submit Monkey 
           </Button>
           {/* if submitted is true then redirect to index page */}
