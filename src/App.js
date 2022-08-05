@@ -24,6 +24,7 @@ class App extends Component {
     }
   }
 
+<<<<<<< HEAD
   createNewMonkey = (theNewMonkeyObject) =>{
     console.log(theNewMonkeyObject);
   }
@@ -36,6 +37,11 @@ class App extends Component {
     console.log("monkey:", monkey)
     console.log("id:", id)
   }
+=======
+  createNewMonkey = (theNewMonkeyObject) => {
+    console.log(theNewMonkeyObject)
+  }
+>>>>>>> d6d53784d775876dbe3ea62180cbeb816a2ef439
 
   render() {
     console.log('appjs state', this.state)
@@ -56,8 +62,14 @@ class App extends Component {
                 ) 
               }}/>
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
+<<<<<<< HEAD
               <Route path="/monkeynew" render={() => {
                 return <MonkeyNew createNewMonkey={this.createNewMonkey}/>
+=======
+              <Route path="/monkeynew" 
+                render={() => {
+                  return <MonkeyNew createNewMonkey={this.createNewMonkey} />
+>>>>>>> d6d53784d775876dbe3ea62180cbeb816a2ef439
                 }} />
               <Route path="/monkeyshow/:id" render={(props) => {
                 let id = +props.match.params.id // adding + sign will allow it to do conversion
