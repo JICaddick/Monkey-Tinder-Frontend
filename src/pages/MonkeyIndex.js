@@ -37,6 +37,7 @@ class MonkeyIndex extends Component {
             </CardBody>
             </Card>)
           })}
+          {/* add new monkey button */}
 
         </div>
       </>
@@ -46,9 +47,3 @@ class MonkeyIndex extends Component {
 
 
 export default MonkeyIndex
-
-
-
-
-
-

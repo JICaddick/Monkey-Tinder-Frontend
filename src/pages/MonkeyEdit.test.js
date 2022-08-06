@@ -1,20 +1,20 @@
 import React from 'react'
 import Enzyme, { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import MonkeyNew from './MonkeyNew'
+import MonkeyEdit from './MonkeyEdit'
 
 Enzyme.configure({adapter: new Adapter()})
 
-describe("When MonkeyNew renders", ()=> {
+describe("When MonkeyEdit renders", ()=> {
     it("displays a form", ()=> {
-     const monkeyNew = shallow(<MonkeyNew />)
-     const formGroup = monkeyNew.find("FormGroup")
+     const monkeyEdit = shallow(<MonkeyEdit />)
+     const formGroup = monkeyEdit.find("FormGroup")
      expect(formGroup.length).toEqual(4)
 
-     const formLabel = monkeyNew.find("Label")
+     const formLabel = monkeyEdit.find("Label")
      expect(formLabel.length).toEqual(4)
 
-     const formInput = monkeyNew.find("Input")
+     const formInput = monkeyEdit.find("Input")
      expect(formInput.length).toEqual(4)
 
     })

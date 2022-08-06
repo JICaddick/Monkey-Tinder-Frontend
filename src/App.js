@@ -24,26 +24,36 @@ class App extends Component {
     }
   }
 
-  createNewMonkey = (theNewMonkeyObject) => {
-    console.log(theNewMonkeyObject)
+  createNewMonkey = (theNewMonkeyObject) =>{
+    console.log(theNewMonkeyObject);
+  }
+
+  updateMonkey = (monkey, id) => {
+    console.log("monkey:", monkey)
+    console.log("id:", id)
   }
 
   render() {
-    // console.log(this.state.monkey)
+    console.log('appjs state', this.state)
     return (
-      // Wrap entire return in <Router>
       <>
         <Router>
-          {/* Header and Footer and anything else you want on every page should be inside of the Router but outside of the Switch */}
           <Header/>
             <Switch>
-              {/* exact looks for the base URL */}
               <Route exact path="/" component={Home} />
-              <Route path="/monkeyedit" component={MonkeyEdit} />
+              <Route path="/monkeyedit/:id" render={(props) => {
+                let id = +props.match.params.id
+                let monkey = this.state.monkey.find(monkeyObject => monkeyObject.id === id)
+                return(
+                  <MonkeyEdit
+                    monkey = {monkey}
+                    updateMonkey = {this.updateMonkey}
+                  /> 
+                ) 
+              }}/>
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
-              <Route path="/monkeynew" 
-                render={() => {
-                  return <MonkeyNew createNewMonkey={this.createNewMonkey} />
+              <Route path="/monkeynew" render={() => {
+                return <MonkeyNew createNewMonkey={this.createNewMonkey}/>
                 }} />
               <Route path="/monkeyshow/:id" render={(props) => {
                 let id = +props.match.params.id // adding + sign will allow it to do conversion
