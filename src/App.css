@@ -2,8 +2,8 @@ header {
   /* background-color: ;
   color: ;
   background: linear-gradient(to top,   ,   )
-  height: ;
-  text-align: center; */
+  height: ;*/
+  text-align: center; 
   font-family: 'Times New Roman', Times, serif;
   font-size: 25px;
 }
@@ -12,8 +12,8 @@ footer {
   /* background-color: ;
   color: ;
   background: linear-gradient(to top,   ,   )
-  height: ;
-  text-align: center; */
+  height: ;*/
+  text-align: center; 
   font-family: 'Times New Roman', Times, serif; 
   font-size: 30px;
 
@@ -34,4 +34,8 @@ footer {
   text-align: center;
   padding-bottom: 80px;
   padding-top: 40px;
+}
+
+.homepagestuff {
+  text-align: center;
 }

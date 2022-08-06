@@ -6,13 +6,20 @@ import Home from './Home'
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("When Home Renders", () => {
+    let renderedHome
+    beforeEach(() => {
+        renderedHome = shallow(<Home />)
+    })
     it("displays text", () => {
-        const renderedHome = shallow(<Home />)
-        
-        const homeWelcomeTag = renderedHome.find("h3")
+        const homeWelcomeTag = renderedHome.find("h1")
         const homeWelcomeTagText = homeWelcomeTag.text()
 
         expect(homeWelcomeTagText).toEqual("Welcome to Monkey Tinder")
+    })
+
+    it("displays an image on home page", ()=>{
+        const homeImage = renderedHome.find("img")
+        expect(homeImage.length).toEqual(1)
     })
 })
 

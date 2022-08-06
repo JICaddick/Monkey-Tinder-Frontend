@@ -22,10 +22,10 @@ class MonkeyShow extends Component {
               className="mb-2 text-muted"
               tag="h6"
             >
-              {monk.age}
+              {monk.age} years old
             </CardSubtitle>
             <CardText>
-              {monk.enjoys}
+              I enjoy {monk.enjoys}
             </CardText>
             <NavLink to={`/monkeyedit/${this.props.monk.id}`}>
               <Button>Edit Monkey Profile</Button>
