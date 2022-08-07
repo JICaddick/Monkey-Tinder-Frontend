@@ -1,32 +1,28 @@
 header {
-  background-color: #5CD85A ;
-  color: black ;
-  background: linear-gradient(to bottom,#5CD85A ,#32804d);
-  height: 30vh;
-  text-align: center;
-  font-family: 'naluka';
-  font-size: 80px;
-}
-
-@font-face {
-  font-family: naluka;
-  src: url(./assets/NalukaRegular-w1q6Z.ttf);
+  /* background-color: ;
+  color: ;
+  background: linear-gradient(to top,   ,   )
+  height: ;*/
+  text-align: center; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
 }
 
 footer {
-  background-color: #B67B65;
-  color: black;
-  background: linear-gradient(to top,#B67B65, #C79606);
-  height: 20vh;
-  text-align: left;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
-
+  /* background-color: ;
+  color: ;
+  background: linear-gradient(to top,   ,   )
+  height: ;*/
+  text-align: center; 
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 30px;
 }
+
 .home {
   background-color: #32804d;
   height: 50vh;
 }
+
 .not-found{
   background-image: url(./assets/notfound.jpeg);
   background-repeat: no-repeat;
@@ -42,4 +38,8 @@ footer {
   text-align: center;
   padding-bottom: 80px;
   padding-top: 40px;
+}
+
+.homepagestuff {
+  text-align: center;
 }

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import homemonkey from "../assets/home-monkey.jpeg"
+import homepage from '../assets/homepage.jpeg'
 
 class Home extends Component {
   render() {
     return (
       <>
-        <div className="home">
-          <center>
-            <h3>Home</h3>
-            <img style= {{height: "300px", width:"auto" }} src={homemonkey} ></img>
-          </center>
+        <div className='homepagestuff'>
+          <h1>Welcome to Monkey Tinder</h1>
+          <img src={homepage}/>
+          <h2>Where you can find your pri-MATE!</h2>
         </div>
+
       </>
     )
   }
