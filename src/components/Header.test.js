@@ -15,3 +15,5 @@ describe("When Header renders", () => {
         expect(HeaderTagText).toEqual("Welcome to Monkey Tinder")
     })
 })
+
+// STRETCH: additional test to check for a tag by it's class name to contain some tests

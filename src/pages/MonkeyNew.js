@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import { Form, FormGroup, Label, Input, Button} from 'reactstrap'
+import React, { Component } from 'react'
+import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { Redirect } from 'react-router-dom'
 
 class MonkeyNew extends Component {
@@ -7,12 +7,11 @@ class MonkeyNew extends Component {
     super(props)
     this.state = {
       newMonkey: {
-        name: "",
+        name:"",
         age: "",
         enjoys: "",
-        img: ""
+        image:""
       },
-      // info is not automatically submitted
       submitted: false
     }
   }
@@ -27,8 +26,9 @@ class MonkeyNew extends Component {
 
   handleSubmit = () => {
     this.props.createNewMonkey(this.state.newMonkey)
-    this.setState({ submitted: true })
+    this.setState({ submitted: true})
   }
+
 
   render() {
   // So you can see your input storing in appropriate field
@@ -36,45 +36,50 @@ class MonkeyNew extends Component {
   console.log('app js state:', this.state)
     return (
       <>
-        <Form>
-          <FormGroup>
-            <Label for='name'> 
-              Name 
-            </Label>
-            <Input
-              type='text'
-              name='name'
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for='age'> 
-              Age 
-            </Label>
-            <Input
-              type='text'
-              name='age'
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Label for='image'>
-              Image
-            </Label>
-            <Input
-              type='text'
-              name='image'
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <Button
-            name='submit'
-            onClick={this.handleSubmit}> 
-            Submit Monkey 
-          </Button>
-          {/* if submitted is true then redirect to index page */}
-          { this.state.submitted && <Redirect to='/monkeyindex'/>}
-          </Form>
+      <Form>
+        <FormGroup>
+          <Label for="name">Name</Label>
+          <Input 
+            type="text" 
+            name="name" 
+            onChange={this.handleChange}
+            
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="age">Age</Label>
+          <Input 
+            type="text" 
+            name="age" 
+            onChange={this.handleChange}
+
+        />
+        </FormGroup>
+        <FormGroup>
+          <Label for="enjoys">Enjoys</Label>
+          <Input 
+            type="text" 
+            name="enjoys"
+            onChange={this.handleChange}
+
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="image">Image</Label>
+          <Input 
+            type="text" 
+            name="image" 
+            onChange={this.handleChange}
+
+          />
+        </FormGroup>
+        <Button
+          name="submit"
+          onClick={this.handleSubmit}
+          >Submit Monkey
+        </Button>
+        { this.state.submitted && <Redirect to="/monkeyindex"/> }
+      </Form>
       </>
     )
   }

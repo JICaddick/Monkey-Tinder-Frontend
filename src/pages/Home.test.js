@@ -15,3 +15,5 @@ describe("When Home Renders", () => {
         expect(homeWelcomeTagText).toEqual("Welcome to Monkey Tinder")
     })
 })
+
+// STRETCH: Checks for the first image tag and all of its props
