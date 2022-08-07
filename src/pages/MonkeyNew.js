@@ -58,6 +58,16 @@ class MonkeyNew extends Component {
             />
           </FormGroup>
           <FormGroup>
+            <Label for='enjoys'>
+              enjoys
+            </Label>
+            <Input
+              type='text'
+              name='enjoys'
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
             <Label for='image'>
               Image
             </Label>

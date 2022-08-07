@@ -3,7 +3,7 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardImg, CardText } from 'reac
 
 class MonkeyShow extends Component {
   render() {
-    // console.log(this.props.monkey);
+    console.log(this.props.monkey);
     let {monk} = this.props
     return (
       <>
