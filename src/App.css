@@ -16,7 +16,11 @@ footer {
   text-align: center; 
   font-family: 'Times New Roman', Times, serif; 
   font-size: 30px;
+}
 
+.home {
+  background-color: #32804d;
+  height: 50vh;
 }
 
 .not-found{

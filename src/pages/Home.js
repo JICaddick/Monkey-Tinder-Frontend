@@ -11,7 +11,6 @@ class Home extends Component {
           <h2>Where you can find your pri-MATE!</h2>
         </div>
 
-        {/*  Intro with links to take you to : See all available monkeys (more info button), a specific monkey (edit/ delete), Make a new monkey profile  */}
       </>
     )
   }
