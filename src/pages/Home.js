@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import homemonkey from "../assets/home-monkey.jpeg"
 
 class Home extends Component {
   render() {
     return (
       <>
-        <h3>Welcome to Monkey Tinder</h3>
-        {/*  Intro with links to take you to : See all available monkeys (more info button), a specific monkey (edit/ delete), Make a new monkey profile  */}
-        {/*  */}
+        <div className="home">
+          <center>
+            <h3>Home</h3>
+            <img style= {{height: "300px", width:"auto" }} src={homemonkey} ></img>
+          </center>
+        </div>
       </>
     )
   }
