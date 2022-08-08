@@ -11,7 +11,6 @@ class MonkeyEdit extends Component {
         age: this.props.monkey.age,
         enjoys: this.props.monkey.enjoys,
         image: this.props.monkey.image
-
       },
       submitted: false
     }

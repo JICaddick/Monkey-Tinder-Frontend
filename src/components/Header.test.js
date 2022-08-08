@@ -24,5 +24,3 @@ describe("When Header renders", () => {
         expect(renderedHeaderClassName.length).toEqual(1)
     })
 })
-
-// STRETCH: additional test to check for a tag by it's class name to contain some tests

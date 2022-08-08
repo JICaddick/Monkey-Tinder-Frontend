@@ -10,12 +10,9 @@ describe("When MonkeyNew renders", ()=> {
      const monkeyNew = shallow(<MonkeyNew />)
      const formGroup = monkeyNew.find("FormGroup")
      expect(formGroup.length).toEqual(4)
-
      const formLabel = monkeyNew.find("Label")
      expect(formLabel.length).toEqual(4)
-
      const formInput = monkeyNew.find("Input")
      expect(formInput.length).toEqual(4)
-
     })
 })

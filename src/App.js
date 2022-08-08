@@ -7,12 +7,12 @@ import MonkeyShow from './pages/MonkeyShow'
 import MonkeyNew from './pages/MonkeyNew'
 import MonkeyEdit from './pages/MonkeyEdit'
 import NotFound from './pages/NotFound'
+import './App.css'
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
-import './App.css'
 
 
 class App extends Component {
@@ -44,7 +44,6 @@ class App extends Component {
     method:"POST"
     })
     .then(response => response.json())
-    // since there's no payload and state needs to be updated with new monkey, refresh state by calling readMonkey
     .then(() => this.readMonkey())
     .catch(errors => console.log("Monkey new errors: ", errors))
   } 
@@ -63,7 +62,15 @@ class App extends Component {
   }
 
   deleteMonkey = (id) => {
-    console.log("deleted", id)
+    fetch(`http://localhost:3000/monkeys/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(() => this.readMonkey())
+    .catch(errors => console.log("Monkey delete errors:", errors))
   }
 
   render() {
@@ -81,12 +88,12 @@ class App extends Component {
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
               <Route path="/monkeynew" render={() => {
                 return <MonkeyNew createNewMonkey={this.createNewMonkey}/>
-                }} />
+              }} />
               <Route path="/monkeyshow/:id" render={(props) => {
                 let id = +props.match.params.id
                 let monk = this.state.monkey.find(monkObject => monkObject.id === id)
-              return <MonkeyShow monk={monk} deleteMonkey={ this.deleteMonkey } />
-              }} />
+                return <MonkeyShow monk={monk} deleteMonkey={ this.deleteMonkey } />
+              }}/>
               <Route component={NotFound}/>
             </Switch>
           <Footer/>
