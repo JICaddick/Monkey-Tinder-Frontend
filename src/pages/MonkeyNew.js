@@ -18,9 +18,7 @@ class MonkeyNew extends Component {
 
   handleChange = (e) => {
     const {newMonkey} = this.state
-    // extract the key(name) from the newMonkey input and assign it the value
     newMonkey[e.target.name] = e.target.value
-    // console.log(this.state)
     this.setState({newMonkey: newMonkey})
   }
 
@@ -31,11 +29,7 @@ class MonkeyNew extends Component {
 
 
   render() {
-  // So you can see your input storing in appropriate field
-  // console.log('from monkeyNew', this.state)
-  console.log('app js state:', this.state)
     return (
-      <>
         <Form>
           <FormGroup>
             <Label for='name'> 
@@ -85,7 +79,6 @@ class MonkeyNew extends Component {
           {/* if submitted is true then redirect to index page */}
           { this.state.submitted && <Redirect to='/monkeyindex'/>}
           </Form>
-      </>
     )
   }
 }

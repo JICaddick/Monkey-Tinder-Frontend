@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 class MonkeyIndex extends Component {
   render() {
-    console.log(this.props.monkey)
     return (
       <>
         <h2>Find your pri-MATE</h2>
