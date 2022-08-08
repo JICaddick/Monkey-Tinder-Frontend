@@ -4,9 +4,11 @@ class Footer extends Component {
   render() {
     return (
       <>
+      <div className='monkeyfoot'>
         <footer>
-          © Primative Dating Inc 
+          <h4>© Primative Dating Inc</h4>
         </footer> 
+      </div>
       </>
     )
   }

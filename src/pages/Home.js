@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import homepage from '../assets/homepage.jpeg'
 
 class Home extends Component {
   render() {
     console.log(this.state)
     return (
       <>
-        <h3>Welcome to Monkey Tinder</h3>
+        <div className='homepagestuff'>
+          <h1>Welcome to Monkey Tinder</h1>
+          <img src={homepage}/>
+          <h2>Where you can find your pri-MATE!</h2>
+        </div>
+
       </>
     )
   }

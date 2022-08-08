@@ -3,12 +3,13 @@ import React, { Component } from 'react'
 class Header extends Component {
   render() {
     return (
-        <>
-            <header>
-              Welcome to Monkey Tinder
-            </header>    
-        </>
-
+      <>
+        <div className='monkeyhead'>
+          <header>
+            <h2>Monkey Tinder</h2>
+          </header>   
+        </div> 
+      </>
     )
   }
 }

@@ -22,7 +22,7 @@ class App extends Component {
       monkey: []
     }
   }
-
+  
   componentDidMount() {
     this.readMonkey()
     console.log(this.state)
@@ -68,6 +68,7 @@ class App extends Component {
 
   render() {
     console.log('appjs state: ', this.state)
+
     return (
       <>
         <Router>
@@ -80,9 +81,8 @@ class App extends Component {
                 return <MonkeyEdit monk={monk} updateMonkey={this.updateMonkey} />
               }}/>
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
-              <Route path="/monkeynew" 
-                render={() => {
-                  return <MonkeyNew createNewMonkey={this.createNewMonkey} />
+              <Route path="/monkeynew" render={() => {
+                return <MonkeyNew createNewMonkey={this.createNewMonkey}/>
                 }} />
               <Route path="/monkeyshow/:id" render={(props) => {
                 let id = +props.match.params.id

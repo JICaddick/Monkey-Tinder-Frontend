@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Card, CardBody, CardTitle, CardSubtitle, CardImg, CardText } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle, CardImg, CardText, Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 
 class MonkeyShow extends Component {
   render() {
@@ -21,10 +22,15 @@ class MonkeyShow extends Component {
               className="mb-2 text-muted"
               tag="h6"
             >
-              {monk.age}
-                </CardSubtitle>
-                <CardText>
-              {monk.enjoys}</CardText>
+              {monk.age} years old
+            </CardSubtitle>
+            <CardText>
+              I enjoy {monk.enjoys}
+            </CardText>
+            <NavLink to={`/monkeyedit/${this.props.monk.id}`}>
+              <Button>Edit Monkey Profile</Button>
+            </NavLink>
+            {/* Delete monkey button */}
           </CardBody>
         </Card>
       </>
