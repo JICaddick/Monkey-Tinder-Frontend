@@ -18,9 +18,7 @@ class MonkeyNew extends Component {
 
   handleChange = (e) => {
     const {newMonkey} = this.state
-    // extract the key(name) from the newMonkey input and assign it the value
     newMonkey[e.target.name] = e.target.value
-    // console.log(this.state)
     this.setState({newMonkey: newMonkey})
   }
 
@@ -31,56 +29,56 @@ class MonkeyNew extends Component {
 
 
   render() {
-  // So you can see your input storing in appropriate field
-  // console.log('from monkeyNew', this.state)
-  console.log('app js state:', this.state)
     return (
-      <>
-      <Form>
-        <FormGroup>
-          <Label for="name">Name</Label>
-          <Input 
-            type="text" 
-            name="name" 
-            onChange={this.handleChange}
-            
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="age">Age</Label>
-          <Input 
-            type="text" 
-            name="age" 
-            onChange={this.handleChange}
-
-        />
-        </FormGroup>
-        <FormGroup>
-          <Label for="enjoys">Enjoys</Label>
-          <Input 
-            type="text" 
-            name="enjoys"
-            onChange={this.handleChange}
-
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label for="image">Image</Label>
-          <Input 
-            type="text" 
-            name="image" 
-            onChange={this.handleChange}
-
-          />
-        </FormGroup>
-        <Button
-          name="submit"
-          onClick={this.handleSubmit}
-          >Submit Monkey
-        </Button>
-        { this.state.submitted && <Redirect to="/monkeyindex"/> }
-      </Form>
-      </>
+        <Form>
+          <FormGroup>
+            <Label for='name'> 
+              Name 
+            </Label>
+            <Input
+              type='text'
+              name='name'
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for='age'> 
+              Age 
+            </Label>
+            <Input
+              type='text'
+              name='age'
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for='enjoys'>
+              enjoys
+            </Label>
+            <Input
+              type='text'
+              name='enjoys'
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for='image'>
+              Image
+            </Label>
+            <Input
+              type='text'
+              name='image'
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <Button
+            name='submit'
+            onClick={this.handleSubmit}> 
+            Submit Monkey 
+          </Button>
+          {/* if submitted is true then redirect to index page */}
+          { this.state.submitted && <Redirect to='/monkeyindex'/>}
+          </Form>
     )
   }
 }

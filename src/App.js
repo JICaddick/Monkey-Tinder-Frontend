@@ -7,7 +7,6 @@ import MonkeyShow from './pages/MonkeyShow'
 import MonkeyNew from './pages/MonkeyNew'
 import MonkeyEdit from './pages/MonkeyEdit'
 import NotFound from './pages/NotFound'
-import monkey from './mockMonkey.js'
 import {
   BrowserRouter as Router,
   Route,
@@ -20,21 +19,54 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      monkey: monkey
+      monkey: []
     }
   }
-
-  createNewMonkey = (theNewMonkeyObject) =>{
-    console.log(theNewMonkeyObject);
+  
+  componentDidMount() {
+    this.readMonkey()
+    console.log(this.state)
   }
+  
+  readMonkey = () => {
+    fetch("http://localhost:3000/monkeys")
+    .then(response => response.json())
+    .then(monkeyArr => this.setState({monkey: monkeyArr}))
+    .catch(errors => console.log("Monkey read errors: ", errors))
+  }
+  
+  createNewMonkey = (theNewMonkeyObject) =>{
+    fetch("http://localhost:3000/monkeys",{
+    body: JSON.stringify(theNewMonkeyObject),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method:"POST"
+    })
+    .then(response => response.json())
+    // since there's no payload and state needs to be updated with new monkey, refresh state by calling readMonkey
+    .then(() => this.readMonkey())
+    .catch(errors => console.log("Monkey new errors: ", errors))
+  } 
 
   updateMonkey = (monkey, id) => {
-    console.log("monkey:", monkey)
-    console.log("id:", id)
+    fetch(`http://localhost:3000/monkeys/${id}`,{
+    body: JSON.stringify(monkey),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method:"PATCH"
+    })
+    .then(response => response.json())
+    .then(()=> this.readMonkey())
+    .catch(errors => console.log("Monkey update errors: ", errors))
+  }
+
+  deleteMonkey = (id) => {
+    console.log("deleted", id)
   }
 
   render() {
-    console.log('appjs state', this.state)
     return (
       <>
         <Router>
@@ -43,24 +75,17 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route path="/monkeyedit/:id" render={(props) => {
                 let id = +props.match.params.id
-                let monkey = this.state.monkey.find(monkeyObject => monkeyObject.id === id)
-                return(
-                  <MonkeyEdit
-                    monkey = {monkey}
-                    updateMonkey = {this.updateMonkey}
-                  /> 
-                ) 
+                let monk = this.state.monkey.find(monkobject => monkobject.id === id)
+                return <MonkeyEdit monk={monk} updateMonkey={this.updateMonkey} />
               }}/>
               <Route path="/monkeyindex" render={() => <MonkeyIndex monkey={this.state.monkey} /> } />
               <Route path="/monkeynew" render={() => {
                 return <MonkeyNew createNewMonkey={this.createNewMonkey}/>
                 }} />
               <Route path="/monkeyshow/:id" render={(props) => {
-                let id = +props.match.params.id // adding + sign will allow it to do conversion
-                // console.log(typeof id); // returns that id = string
+                let id = +props.match.params.id
                 let monk = this.state.monkey.find(monkObject => monkObject.id === id)
-                // console.log(monk); // undefined
-                return <MonkeyShow monk={monk}/>
+              return <MonkeyShow monk={monk} deleteMonkey={ this.deleteMonkey } />
               }} />
               <Route component={NotFound}/>
             </Switch>
