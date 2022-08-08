@@ -10,7 +10,6 @@ class Home extends Component {
           <img src={homepage}/>
           <h2>Where you can find your pri-MATE!</h2>
         </div>
-
       </>
     )
   }
