@@ -25,12 +25,11 @@ class MonkeyShow extends Component {
             <CardText>
               I enjoy {monk.enjoys}
             </CardText>
-            <NavLink to={`/monkeyedit/${this.props.monk.id}`}>
+            <NavLink to={"/monkeyindex/"}>
               <Button>Update Monkey</Button>
             </NavLink>
-            {/* {this.state.submitted && <Redirect to={`/monkeyshow/${this.props.monk.id}`}/>} */}
             <NavLink to={`/monkeyindex/${this.props.monk.id}`}>
-              <Button onClick={() => this.props.deleteMonkey(monk.id )}>
+              <Button onClick={() => this.props.deleteMonkey(monk.id)}>
                 Delete Monkey Profile
               </Button>
             </NavLink>

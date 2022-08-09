@@ -61,8 +61,16 @@ class App extends Component {
     .catch(errors => console.log("Monkey update errors: ", errors))
   }
 
-  deleteCat = (id) => {
-    console.log("deleted", id)
+    deleteMonkey = (id) => {
+    fetch(`http://localhost:3000/monkeys/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then(response => response.json())
+    .then(() => this.readMonkey())
+    .catch(errors => console.log("Monkey delete errors:", errors))
   }
 
   render() {
