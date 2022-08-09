@@ -13,14 +13,10 @@ describe("When Home Renders", () => {
     it("displays text", () => {
         const homeWelcomeTag = renderedHome.find("h1")
         const homeWelcomeTagText = homeWelcomeTag.text()
-
         expect(homeWelcomeTagText).toEqual("Welcome to Monkey Tinder")
     })
-
     it("displays an image on home page", ()=>{
         const homeImage = renderedHome.find("img")
         expect(homeImage.length).toEqual(1)
     })
 })
-
-// STRETCH: Checks for the first image tag and all of its props

@@ -27,10 +27,9 @@ class MonkeyNew extends Component {
     this.setState({ submitted: true})
   }
 
-
   render() {
     return (
-        <Form>
+        <Form className='newmonkey'>
           <FormGroup>
             <Label for='name'> 
               Name 
@@ -76,7 +75,6 @@ class MonkeyNew extends Component {
             onClick={this.handleSubmit}> 
             Submit Monkey 
           </Button>
-          {/* if submitted is true then redirect to index page */}
           { this.state.submitted && <Redirect to='/monkeyindex'/>}
           </Form>
     )

@@ -1,26 +1,44 @@
 header {
-  /* background-color: ;
-  color: ;
-  background: linear-gradient(to top,   ,   )
-  height: ;*/
-  text-align: center; 
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
+  background-color: #5CD85A ;
+  color: black ;
+  background: linear-gradient(to bottom,#5CD85A ,#32804d);
+  height: 15vh;
+  text-align: center;
+  font-family: 'naluka';
+  font-size: 20px;
 }
 
 footer {
-  /* background-color: ;
-  color: ;
-  background: linear-gradient(to top,   ,   )
-  height: ;*/
-  text-align: center; 
-  font-family: 'Times New Roman', Times, serif; 
-  font-size: 30px;
+  background-color: #B67B65;
+  color: black;
+  background: linear-gradient(to top,#B67B65, #C79606);
+  height: 15vh;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
 }
 
-.home {
-  background-color: #32804d;
-  height: 50vh;
+.logo {
+  font-size: 45px;
+}
+
+.homepagepic {
+  height: 65%;
+}
+
+.welcomesign {
+  font-family: naluka;
+  src: url(./assets/NalukaRegular-w1q6Z.ttf);
+}
+
+.indexpage {
+  text-align: center;
+}
+
+@font-face {
+  font-family: naluka;
+  src: url(./assets/NalukaRegular-w1q6Z.ttf);
 }
 
 .not-found{
@@ -41,5 +59,25 @@ footer {
 }
 
 .homepagestuff {
+  padding: 80px;
   text-align: center;
+  background-color: #32804d;
+  height: 70vh;
+}
+
+.cardcontainer {
+  align-items: center;
+}
+
+.cardcontainer img{
+  height: 350px;
+  width: 350px;
+}
+
+.cardcontainer button {
+  margin: 5px;
+}
+
+.newmonkey {
+  padding: 20px;
 }

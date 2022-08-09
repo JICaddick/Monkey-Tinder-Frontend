@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+import { Button } from 'reactstrap';
 import homepage from '../assets/homepage.jpeg'
 
 class Home extends Component {
@@ -6,9 +8,14 @@ class Home extends Component {
     return (
       <>
         <div className='homepagestuff'>
-          <h1>Welcome to Monkey Tinder</h1>
-          <img src={homepage}/>
-          <h2>Where you can find your pri-MATE!</h2>
+          <h1 className='welcomesign'>Welcome to Monkey Tinder</h1>
+          <img src={homepage} className='homepagepic'/>
+          <h2 className='welcomesign'>Find your pri-MATE!</h2>
+          <NavLink to="/monkeyindex">
+            <Button>
+              Enter
+            </Button>
+          </NavLink>
         </div>
       </>
     )

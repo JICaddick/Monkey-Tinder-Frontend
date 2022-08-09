@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -6,7 +7,16 @@ class Header extends Component {
       <>
         <div className='monkeyhead'>
           <header>
-            <h2>Monkey Tinder</h2>
+            <h2 className='logo'>Monkey Tinder</h2>
+            <NavLink to={"/"}>
+              <button>Home</button>
+            </NavLink>  
+            <NavLink to={"/monkeyindex"}>
+              <button>Meet Your Mates</button> 
+            </NavLink>
+            <NavLink to={"/monkeynew"}>
+              <button>Create your primal profile</button>
+            </NavLink>
           </header>   
         </div> 
       </>

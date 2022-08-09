@@ -26,7 +26,6 @@ describe("When MonkeyIndex renders", () => {
     })
     it("displays a heading", () => {
         const indexHeader = renderedMonkeyIndex.find("h2") 
-        // const MonkeyIndexTagText = MonkeyIndexTag.text()
         expect(indexHeader.length).toEqual(1)
         expect(indexHeader.text()).toEqual("Find your pri-MATE")
     })
